@@ -1,0 +1,46 @@
+public class Methods {
+    
+    public Methods() {
+        
+    }
+    
+    public double averageListNum(double[] numlist) {
+        int listSum = 0;
+        for (int i = 0; (i < numlist.length); i++) {
+            listSum = (listSum + numlist[i]);
+        }
+        
+        float avg = (listSum / numlist.length);
+        System.out.println(avg);
+        return avg;
+    }
+    
+    public void reverseList(String[] varlist) {
+        for (int i = (varlist.length - 1); (i >= 0); i--) {
+            System.out.println(varlist[i]);
+        }
+        
+    }
+    
+    public class Main {
+        
+        public static void main(String[] args) {
+            double[] list1 = new double[] {
+                    24,
+                    255,
+                    3.1,
+                    4,
+                    234,
+                    99};
+            String[] list2 = new String[] {
+                    "heart",
+                    "broken",
+                    "a",
+                    "mend"};
+            Methods implem = new Methods();
+            implem.averageListNum(list1);
+            System.out.println();
+            implem.reverseList(list2);
+        }
+    }
+}
